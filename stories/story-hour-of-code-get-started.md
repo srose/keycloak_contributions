@@ -1,5 +1,5 @@
 # Contributions 
-Keycloak code resides on github.
+Keycloak code resides on GitHub.
 Any contribution to anything inside https://github.com/keycloak require a pull request (pr). 
 A pull request can be initiated/created through the browser/a web based ide or a local machine.
 
@@ -7,31 +7,27 @@ A pull request can be initiated/created through the browser/a web based ide or a
 1. Install git 
 2. Configure git
 3. Optional: install sdkman
-4. Install Java >= 21 through os or sdkman
+4. Install Java 21 through os or sdkman
 5. Optional: Install Maven through os or sdkman
    - Maven wrapper in root, but useful for subproject runs
 6. Generate ssh-key into ~/.ssh/
-```bash
-TODO install
-TODO generate ssh key
-```
 
 ## Regular task: Local machine: preparation steps
-1. Have some "my-ssh-key-available" steps in place
+1. Have an environment-variable CODE_HOME and KEYCLOAK_LOCAL_DIR in place
 
 ```bash
 export CODE_HOME=~/Local/repositories
-export KEYCLOAK_LOCAL_DIR=keycloak_my
+export KEYCLOAK_LOCAL_DIR=keycloak_srose
 ```
 
-2. Have an environment-variable CODE_HOME in place
+2. Have some "my-ssh-key-available" steps in place
 ```bash
 ssh-add ~/.ssh/id_rsa
 ```
 
 ## Github: initialization steps
 1. Create a github account: https://github.com/signup
-2. Setup your github account with a ssh-key: https://github.com/settings/keys
+2. Setup your github account with an ssh-key: https://github.com/settings/keys
 
 ## Github: prepare git repo to contribute to
 - Note: Is there something written on this general contribution pattern?
@@ -132,6 +128,8 @@ Favorit build command, ...
 
 ## Regular task: Local: open in IDE (IntelliJ)
 
+Copy run configs [here](../howto-02-run.md#ide-intellij) before, so they might be there...
+
 ```bash
 /opt/idea/bin/idea.sh $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
@@ -143,8 +141,6 @@ Skip today
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ) in dev-mode
 
-Copy run configs [here](../howto-02-run.md#ide-intellij)
-
 ### Just run
 
 First run `launcher-in-memory`...
@@ -153,8 +149,7 @@ Open http://localhost:8080 in browser
 
 Run a simple api call from [keycloak-api](../api/keycloak-discovery.http)
 
-### Log
-Import [client from ](../config/app1.json)
+### Extensive Logging
 
 Enable logging in the run-configuration to e.g. protocol
 
@@ -165,21 +160,26 @@ Run `launcher-in-memory-logging`
 Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
 ### Debug
-Enable logging in the run-configuration to e.g. services:
+
+Stop previous launch
 
 Run `mvn-quarkus-dev-debug`
 
-Run `debug-remote-5005`
+Debug `debug-remote-5005`
 
 Put a breakpoint in TokenEndpoint.java
 
-Run a simple api call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
+Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
-Step around in the breakpoint, set a response-header?
+Step around in the breakpoint, set e.g. add response-header.
 
 ### Reload changed code?
 
-...
+Change code: e.g. add response header.
+
+Recompile from Build-Menu: Ctrl+Shift+F9.
+
+Repeat token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
 ### Continue
 See more examples [here](../howto-02-run.md#ide-intellij)

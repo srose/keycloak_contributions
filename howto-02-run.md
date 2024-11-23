@@ -1,12 +1,7 @@
-_# Run Keycloak from source
-
-Hot-reload?
-Switch to a file in keycloak_srose IDE to have run-configs working
-
-Just run...
-- see admin-ui/account-ui
-- No database
-- Use endpoint via http-client -> see logs, debug entry point, ...
+# Run Keycloak from source
+Required: 
+- java in version 21
+- Completed [build](howto-01-build.md) 
 
 ## Commandline
 
@@ -21,14 +16,13 @@ mvn clean quarkus:dev -Dquarkus.args="start-dev --bootstrap-admin-password=admin
 
 ## IDE (IntelliJ)
 
-Run-Configurations from the [launch](./launch)-directory in current keycloak...
+Copy run-configurations from the [launch](./launch/)-directory into current keycloak...
 
 ```bash
 yes | cp -rf ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
 ```
 
-### Adjusted Log-Level
-
-### Steering which local dev-mode UIs to use...
-
-TODO_
+| Config | Description |
+|--------|-------------|
+|        |             |
+|        |             |

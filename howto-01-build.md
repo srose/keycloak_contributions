@@ -1,14 +1,9 @@
-# Build Keycloak
-
-TODO
-- Need to double it here?
-- When to use what and why?
-- Quarkus server is wrapping keycloak?
-- UIs are bundled as jars?
-- ...
+# Build Keycloak from source
+Required:
+- java in version 21
 
 ## Command line
-
+Activate build-cache
 ```bash
 export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
 ```
@@ -30,12 +25,17 @@ export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
 ```
 
 ## IDE: IntelliJ
-Hint: One build line run is required to have local binaries?
+Hint: A build is required to have everything working in IntelliJ
 
-Just have it built/indexed/compiled AFTER a build on command line?
+docs/documentation must be added manually: Could be added to [pom.xml in docs](./docs/pom.xml)?
 
-(all the things IntelliJ can help you with?)
+Copy run-configurations from the [launch](./launch/)-directory into current keycloak...
 
-docs/documentation must be added additionally
+```bash
+yes | cp -rf ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
+```
 
-Could be added to [docs](./docs/pom.xml)?
+| Config | Description |
+|--------|-------------|
+|        |             |
+|        |             |

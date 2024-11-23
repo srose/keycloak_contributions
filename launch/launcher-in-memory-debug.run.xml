@@ -2,7 +2,7 @@
   <configuration default="false" name="launcher-in-memory-debug" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="org.keycloak.quarkus._private.IDELauncher" />
     <module name="keycloak-quarkus-server-app" />
-    <option name="PROGRAM_PARAMETERS" value="start-dev --http-port=8080 --verbose" />
+    <option name="PROGRAM_PARAMETERS" value="start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin --http-port=8080 --verbose" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="false" />
       <option name="IS_SUBST" value="false" />

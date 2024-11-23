@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="mvn-quarkus-dev-debug" type="MavenRunConfiguration" factoryName="Maven">
+  <configuration default="false" name="mvn-clean-install-skipTests" type="MavenRunConfiguration" factoryName="Maven">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings">
@@ -8,14 +8,14 @@
           <option name="environmentProperties">
             <map />
           </option>
-          <option name="jreName" value="21" />
+          <option name="jreName" value="#USE_PROJECT_JDK" />
           <option name="mavenProperties">
             <map />
           </option>
           <option name="passParentEnv" value="true" />
           <option name="runMavenInBackground" value="true" />
           <option name="skipTests" value="true" />
-          <option name="vmOptions" value="-Dquarkus.args=&quot;start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin&quot;" />
+          <option name="vmOptions" value="" />
         </MavenRunnerSettings>
       </option>
       <option name="myRunnerParameters">
@@ -26,7 +26,8 @@
           </option>
           <option name="goals">
             <list>
-              <option value="quarkus:dev" />
+              <option value="clean" />
+              <option value="install" />
             </list>
           </option>
           <option name="pomFileName" value="pom.xml" />
@@ -37,7 +38,7 @@
             <list />
           </option>
           <option name="resolveToWorkspace" value="false" />
-          <option name="workingDirPath" value="$PROJECT_DIR$/quarkus/server" />
+          <option name="workingDirPath" value="$PROJECT_DIR$" />
         </MavenRunnerParameters>
       </option>
     </MavenSettings>
