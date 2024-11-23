@@ -136,10 +136,10 @@ Copy run configs [here](../howto-02-run.md#ide-intellij) before, so they might b
 
 Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
 
-## Regular task: Local: run keycloak on command line - in dev-mode
+## Regular task: Local: run keycloak on command line
 Skip today
 
-## Regular task: Local: run keycloak in IDE (IntelliJ) in dev-mode
+## Regular task: Local: run keycloak in IDE (IntelliJ)
 
 ### Just run
 
@@ -177,17 +177,9 @@ Step around in the breakpoint, set e.g. add response-header.
 
 Change code: e.g. add response header.
 
-Recompile from Build-Menu: Ctrl+Shift+F9.
+Recompile from Build-Menu: (Ctrl+Shift+F9|Сmd+Shift+F9)
 
 Repeat token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
 ### Continue
 See more examples [here](../howto-02-run.md#ide-intellij)
-
-## Local: run keycloak on command line - in prod-mode
-Skip today
-
-## Local: run keycloak in IDE (IntelliJ) in prod-mode
-Skip today
-
-
