@@ -1,4 +1,4 @@
-# Run Keycloak from source
+_# Run Keycloak from source
 
 Hot-reload?
 Switch to a file in keycloak_srose IDE to have run-configs working
@@ -21,12 +21,14 @@ mvn clean quarkus:dev -Dquarkus.args="start-dev --bootstrap-admin-password=admin
 
 ## IDE (IntelliJ)
 
-Run-Configurations in [launch](./launch)-directory
+Run-Configurations from the [launch](./launch)-directory in current keycloak...
 
+```bash
+yes | cp -rf ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
 ```
-cp ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
-```
 
-## Steering which local dev-mode UIs to use...
+### Adjusted Log-Level
 
-TODO
+### Steering which local dev-mode UIs to use...
+
+TODO_

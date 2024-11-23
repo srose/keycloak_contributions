@@ -1,0 +1,6 @@
+###
+# group: Standards / OA2/OIDC Util
+# @name OIDC Discovery Document
+
+GET {{keycloak_url}}/realms/{{keycloak_realm}}/.well-known/openid-configuration
+

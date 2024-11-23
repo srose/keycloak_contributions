@@ -18,11 +18,14 @@ TODO generate ssh key
 
 ## Regular task: Local machine: preparation steps
 1. Have some "my-ssh-key-available" steps in place
-2. Have an environment-variable CODE_HOME in place
 
 ```bash
-export CODE_HOME=~/Local/repositories/
+export CODE_HOME=~/Local/repositories
 export KEYCLOAK_LOCAL_DIR=keycloak_my
+```
+
+2. Have an environment-variable CODE_HOME in place
+```bash
 ssh-add ~/.ssh/id_rsa
 ```
 
@@ -133,18 +136,58 @@ Favorit build command, ...
 /opt/idea/bin/idea.sh $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-Continue [here](../howto-01-build.md#ide-intellij)
+Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
 
 ## Regular task: Local: run keycloak on command line - in dev-mode
 Skip today
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ) in dev-mode
 
-Continue [here](../howto-02-run.md#ide-intellij)
+Copy run configs [here](../howto-02-run.md#ide-intellij)
+
+### Just run
+
+First run `launcher-in-memory`...
+
+Open http://localhost:8080 in browser
+
+Run a simple api call from [keycloak-api](../api/keycloak-discovery.http)
+
+### Log
+Import [client from ](../config/app1.json)
+
+Enable logging in the run-configuration to e.g. protocol
+
+Stop previous launch
+
+Run `launcher-in-memory-logging`
+
+Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
+
+### Debug
+Enable logging in the run-configuration to e.g. services:
+
+Run `mvn-quarkus-dev-debug`
+
+Run `debug-remote-5005`
+
+Put a breakpoint in TokenEndpoint.java
+
+Run a simple api call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
+
+Step around in the breakpoint, set a response-header?
+
+### Reload changed code?
+
+...
+
+### Continue
+See more examples [here](../howto-02-run.md#ide-intellij)
 
 ## Local: run keycloak on command line - in prod-mode
 Skip today
 
 ## Local: run keycloak in IDE (IntelliJ) in prod-mode
 Skip today
+
 
