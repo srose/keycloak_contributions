@@ -1,20 +1,23 @@
 # Build Keycloak from source
 Required:
 - java in version 21
+- 
 
-## Command line
+## Commandline
+
 Activate build-cache
 ```bash
 export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
 ```
-
+Full build
 ```bash
 ./mvnw clean install
 ```
-
+Build without executing tests
 ```
 ./mvnw clean install -DskipTests
 ```
+![image](images/build_result_time.png)
 
 ```
 ./mvnw clean install -Pdistribution
@@ -25,17 +28,19 @@ export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
 ```
 
 ## IDE: IntelliJ
-Hint: A build is required to have everything working in IntelliJ
+Required:
+- Maven
 
-docs/documentation must be added manually: Could be added to [pom.xml in docs](./docs/pom.xml)?
+Hint: A commandline build is required to have everything working in IntelliJ, see above.
 
-Copy run-configurations from the [launch](./launch/)-directory into current keycloak...
+Use the Build-Menu Item in IntelliJ: Build Project & Rebuild Project.
 
-```bash
-yes | cp -rf ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
+Question: docs/documentation must be added manually in IDE: Could be added to [pom.xml in docs](./docs/pom.xml)?
+
 ```
 
-| Config | Description |
-|--------|-------------|
-|        |             |
-|        |             |
+### Available configurations
+
+| Config                      | Description              |
+|-----------------------------|--------------------------|
+| mvn-clean-install-skipTests | mvn run as name suggests |

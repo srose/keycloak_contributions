@@ -1,9 +1,13 @@
 # Run Keycloak from source
-Required: 
-- java in version 21
-- Completed [build](howto-01-build.md) 
+Required:
+- 
+- Completed [build](howto-01-build.md)
 
 ## Commandline
+Required:
+- java in version 21
+- Maven
+
 
 ```
 java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin
@@ -15,14 +19,16 @@ mvn clean quarkus:dev -Dquarkus.args="start-dev --bootstrap-admin-password=admin
 ```
 
 ## IDE (IntelliJ)
+Required:
+- Working IDE using java, mvn, etc.
 
-Copy run-configurations from the [launch](./launch/)-directory into current keycloak...
+Run configurations for different purposes:
 
-```bash
-yes | cp -rf ../launch/* $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run/
-```
-
-| Config | Description |
-|--------|-------------|
-|        |             |
-|        |             |
+| Config                     | Description                                                                                     |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| debug-remote-5005          | Remote debugging on port 5005                                                                   |
+| launcher-in-memory         | Uses IDELauncher from keycloak to run keycloak with in memory db                                |
+| launcher-in-memory-debug   | Uses IDELauncher from keycloak to run keycloak with in memory db with debugging enabled         |
+| launcher-in-memory-logging | Uses IDELauncher from keycloak to run keycloak with in memory db with extensive logging enabled |
+| mvn-quarkus-dev-debug      | Uses maven and quarkus:dev task to run keycloak with debugging enabled                          |
+|                            |                                                                                                 |
