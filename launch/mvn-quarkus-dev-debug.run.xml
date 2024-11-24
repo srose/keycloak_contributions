@@ -15,7 +15,7 @@
           <option name="passParentEnv" value="true" />
           <option name="runMavenInBackground" value="true" />
           <option name="skipTests" value="true" />
-          <option name="vmOptions" value="-Dquarkus.args=&quot;start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin&quot;" />
+          <option name="vmOptions" value="-Dquarkus.args=&quot;start-dev --verbose&quot;" />
         </MavenRunnerSettings>
       </option>
       <option name="myRunnerParameters">
@@ -42,7 +42,7 @@
       </option>
     </MavenSettings>
     <extension name="net.ashald.envfile">
-      <option name="IS_ENABLED" value="false" />
+      <option name="IS_ENABLED" value="true" />
       <option name="IS_SUBST" value="false" />
       <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
       <option name="IS_IGNORE_MISSING_FILES" value="false" />

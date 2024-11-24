@@ -1,21 +1,22 @@
 # Run Keycloak from source
 Required:
-- 
 - Completed [build](howto-01-build.md)
+
+All [keycloak application parameters](https://www.keycloak.org/server/all-config) can be used.
 
 ## Commandline
 Required:
 - java in version 21
-- Maven
 
-
+Run from jar-file
 ```
-java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin
+java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --verbose
 ```
 
+Run from maven goal via quarkus:dev
 ```
 cd quarkus/server
-mvn clean quarkus:dev -Dquarkus.args="start-dev --bootstrap-admin-password=admin --bootstrap-admin-username=admin"
+../../mvnw clean quarkus:dev -Dquarkus.args="start-dev --verbose"
 ```
 
 ## IDE (IntelliJ)
@@ -26,9 +27,14 @@ Run configurations for different purposes:
 
 | Config                     | Description                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------|
-| debug-remote-5005          | Remote debugging on port 5005                                                                   |
 | launcher-in-memory         | Uses IDELauncher from keycloak to run keycloak with in memory db                                |
-| launcher-in-memory-debug   | Uses IDELauncher from keycloak to run keycloak with in memory db with debugging enabled         |
 | launcher-in-memory-logging | Uses IDELauncher from keycloak to run keycloak with in memory db with extensive logging enabled |
-| mvn-quarkus-dev-debug      | Uses maven and quarkus:dev task to run keycloak with debugging enabled                          |
-|                            |                                                                                                 |
+| mvn-quarkus-dev-debug      | Uses maven and quarkus:dev task to run keycloak with debugging enabled on port 5005             |
+| debug-remote-5005          | Remote debugging on port 5005                                                                   |
+
+Question: What useful launch-configs or templates should be shared?
+
+### keycloak-quarkus-server-app 
+IntelliJ recognizes a quarkus app, but its not possible to launch or use it.
+
+Question: Why?
