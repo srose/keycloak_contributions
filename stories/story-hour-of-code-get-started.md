@@ -65,22 +65,11 @@ git remote -v
 ```
 
 ## Regular task: Local: keep in sync with central keycloak
-Skip today
-
 ```bash
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
 Details for [keeping in sync](../howto-00-regular-sync.md)
-
-## Regular task: Local: start a new PR for an issue
-Skip today
-
-## Regular task: Local: keep in sync with local work or even a PR in progress
-Skip today
-
-## Regular task: Local: finish a PR for an issue
-Skip today
 
 ## Regular task: Local: build on commandline
 ```bash
@@ -121,7 +110,8 @@ Open the story-file we work with in new IntelliJ-Window.
 Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
 
 ## Regular task: Local: run keycloak on commandline
-Skip today
+
+Many ways starting keycloak on a commandline in [here](../howto-02-run.md#commandline)
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ)
 
@@ -143,7 +133,7 @@ Run `launcher-in-memory-logging`
 
 Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
-### Debug
+### Debugging
 
 Stop previous launch
 
@@ -155,21 +145,31 @@ Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.ht
 
 Step around in the breakpoint, set e.g. add response-header.
 
-### Reload changed code?
+### Reload changed code in debugger
 
 Change code: e.g. add response header.
 
-Recompile from Build-Menu: (Ctrl+Shift+F9|Сmd+Shift+F9)
+Recompile the current File from Build-Menu.
 
 Repeat token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
+Alternative is to stop and rebuild.
+
 ### Persistence
 
-By default, there is a file based h2 database for persistence.
+By default, there is a [file based h2 database](https://www.keycloak.org/server/all-config#category-database) for persistence.
 
-When using IDELauncher, everything resides in target-Folder to have it cleaned up.
+When using IDELauncher, everything resides in target-Folder to have it cleaned up via maven.
 
-This can be changed via *kc.home.dir* setting.
+This can be changed via *kc.home.dir* setting to avoid being deleted via clean-goal of a maven run.
+
+Another option of course would be one of the databases keycloak supports e.g. postgres.
+
+### Configuration
+
+Through persistence, we would not lose our Clients, Users, Roles, Groups, etc.
+
+Automation of this configuration could be an additional feature, but also reproduce our config explicitly.
 
 ### Run a specific version
 For reproducing bugs or understanding behaviour in a previous version.
@@ -182,6 +182,14 @@ git checkout 26.0.1
 
 Build and run as before...
 
-
 ### Continue
-See more examples [here](../howto-02-run.md#ide-intellij)
+Not as a story documented [here](../howto-02-run.md#ide-intellij)
+
+## Regular task: Local: start a new pull-request
+Skip today
+
+## Regular task: Local: keep in sync with a pull-request in progress
+Skip today
+
+## Regular task: Local: finish a pull-request
+Skip today
