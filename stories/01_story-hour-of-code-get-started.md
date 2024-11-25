@@ -87,7 +87,7 @@ Run a build command first, before opening an IDE is recommended
 
 ## Regular task: Local: open in IDE (IntelliJ)
 
-Copy run-configurations from the [launch](./launch/)-directory into current keycloak...
+Copy run-configurations from the [launch](../launch)-directory into current keycloak...
 
 ```bash
 mkdir -p $CODE_HOME/$KEYCLOAK_LOCAL_DIR/.run
@@ -97,7 +97,7 @@ yes | cp -rf $CODE_HOME/keycloak_contributions/launch/* $CODE_HOME/$KEYCLOAK_LOC
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-Run your IDE (IntelliJ) and open the current location.
+Run your IDE (IntelliJ) and open the current location or use the `Project from existing source` wizard.
 
 Open the story-file we work with in **new IntelliJ-Window**.
 

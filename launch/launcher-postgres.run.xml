@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="launcher-in-memory" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.keycloak.quarkus._private.IDELauncher" />
+    <module name="keycloak-quarkus-server-app" />
+    <option name="PROGRAM_PARAMETERS" value="start-dev --db postgres --db-url-host localhost --db-username keycloak --db-password pass --db-url-database --http-port=8080 --verbose" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.keycloak.quarkus._private.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
