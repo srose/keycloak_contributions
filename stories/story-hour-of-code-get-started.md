@@ -11,7 +11,7 @@ This should probably not live long...
 1. Install & configure git 
 2. Install Java 21
 4. Generate ssh-key into ~/.ssh/
-   - Alternative: just use https (in preparation)
+   - Alternative: use https instead of ssh (in preparation)
 
 ## Regular task: Local machine: preparation steps
 1. Have an environment-variable CODE_HOME and KEYCLOAK_LOCAL_DIR in place
@@ -34,6 +34,9 @@ Create a fork of the keycloak-repository
 
 
 ## Local: prepare git repo
+Alternatives:
+- Use IDE (IntelliJ) GitHub-Integration 
+
 Notes: 
 - It might be useful to have multiple local git repos for keycloak.
 - Avoid commit/push something on main of your fork.
@@ -70,17 +73,17 @@ cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 
 Details for [keeping in sync](../howto-00-regular-sync.md)
 
-## Regular task: Local: build on commandline
+## Regular task: Local: build on command-line
 ```bash
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-A build command to proceed in an IDE is required 
+Run a build command first, before opening an IDE is recommended 
 ```bash
 ./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples
 ```
 
-... but there is a lot more on [building](../howto-01-build.md#commandline)
+... but there is a lot more on [building](../howto-01-build.md#command-line)
 
 ## Regular task: Local: open in IDE (IntelliJ)
 
@@ -94,23 +97,17 @@ yes | cp -rf $CODE_HOME/keycloak_contributions/launch/* $CODE_HOME/$KEYCLOAK_LOC
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-```bash
-/opt/idea/bin/idea.sh .
-```
-
-Start a new terminal in **new IntelliJ-Window**.
-
-```bash
-ssh-add ~/.ssh/id_rsa
-```
+Run your IDE (IntelliJ) from here...
+Sometimes the result looks wierd.
+Use the Action "Reload all maven projects" to fix this.
 
 Open the story-file we work with in **new IntelliJ-Window**.
 
 Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
 
-## Regular task: Local: run keycloak on commandline
+## Regular task: Local: run keycloak on command-line
 
-Different ways starting keycloak on a commandline in [here](../howto-02-run.md#commandline)
+Different ways starting keycloak on a command-line in [here](../howto-02-run.md#command-line)
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ)
 
@@ -118,7 +115,7 @@ Different ways starting keycloak on a commandline in [here](../howto-02-run.md#c
 
 First run `launcher-in-memory`...
 
-Open http://localhost:8080 in browser
+Open http://0.0.0.0:8080/ in browser
 
 Run a simple api call from [keycloak-api](../api/keycloak-discovery.http)
 
@@ -144,7 +141,7 @@ Set a breakpoint in e.g. TokenEndpoint.java
 
 Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
-Step around in the breakpoint, set e.g. add response-header.
+Step around after the breakpoint, e.g. add response-header in the instances window.
 
 Other ways through remote debugging.
 

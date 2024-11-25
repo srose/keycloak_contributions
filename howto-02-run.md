@@ -4,7 +4,7 @@ Required:
 
 All [keycloak application parameters](https://www.keycloak.org/server/all-config) can be used.
 
-## Commandline
+## Command-line
 Required:
 - java in version 21
 
@@ -27,7 +27,7 @@ java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --verbose
 
 ## IDE (IntelliJ)
 Required:
-- Working IDE using java, mvn, etc.
+- Working IDE (IntelliJ) using java
 
 ### Available run-configurations
 
@@ -43,4 +43,4 @@ Question: What useful launch-configs or templates should be shared?
 ### keycloak-quarkus-server-app 
 IntelliJ recognizes a quarkus app, but its not possible to launch or use it.
 
-Questions: Ideas or is the IDELauncher the only answer?
+Question: Ideas or is the IDELauncher the only answer?

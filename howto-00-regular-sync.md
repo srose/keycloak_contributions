@@ -8,11 +8,11 @@ Probably have every IDE pointing there closed.
 Required:
 - git
 - ssh
-- commandline with shell in a keycloak-root-directory
+- command-line with shell in a keycloak-root-directory
 
 ![image](./images/regular_branch_unsynced.png)
 
-## GitHub & Commandline
+## GitHub & Command-line
 Go to the GitHub page of your fork e.g.: https://github.com/srose/keycloak
 and use the *Sync fork* button on the right:
 ![image](images/regular_branch_unsynced_fork.png)
@@ -43,7 +43,7 @@ git checkout $CURRENT_BRANCH
 git stash pop
 ```
 
-## Commandline only
+## Command-line only
 Required:
 - a remote upstream point to keycloak central in terms of git. Check via `git remote -v`
 

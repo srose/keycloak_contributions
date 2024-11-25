@@ -2,13 +2,7 @@
 Required:
 - java in version 21
 
-## Commandline
-
-Activate build-cache for performance
-```bash
-export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
-```
-
+## Command-line
 Full build including tests
 ```bash
 ./mvnw clean install
@@ -36,6 +30,12 @@ Build a distribution with all adapters using the distribution-profile
 
 Other profiles?
 
+### Performance
+Activate build-cache for performance
+```bash
+export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
+```
+
 ### Partial builds
 
 Build only the quarkus part
@@ -46,7 +46,7 @@ Build only the quarkus part
 Question: What other partial builds are useful to speed up roundtrips?
 
 ## IDE: IntelliJ
-**Hint**: A commandline build is required to have everything working in an IDE, see above.
+**Hint**: A command-line build is recommended to have everything working in an IDE, see above.
 Some maven plugins are generating class files that are necessary.
 
 **Hint**: Use the Build-Menu Item in IntelliJ: *Build Project* but not *Rebuild Project*. 
