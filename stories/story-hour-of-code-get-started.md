@@ -29,10 +29,9 @@ ssh-add ~/.ssh/id_rsa
 2. Set up your GitHub account with an ssh-key: https://github.com/settings/keys
 
 ## GitHub: prepare git repo to contribute to
-1. Create a fork of the keycloak-repository
-   - https://github.com/keycloak/keycloak/fork
-2. See that fork
-   - https://github.com/$GITHUB_USER/keycloak
+Create a fork of the keycloak-repository
+- https://github.com/keycloak/keycloak/fork
+
 
 ## Local: prepare git repo
 Notes: 
@@ -76,12 +75,12 @@ Details for [keeping in sync](../howto-00-regular-sync.md)
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-Favorit build command, ...
+A build command to proceed in an IDE is required 
 ```bash
 ./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples
 ```
 
-... but there is a lot more on [building](../howto-01-build.md#commandline) on commandline
+... but there is a lot more on [building](../howto-01-build.md#commandline)
 
 ## Regular task: Local: open in IDE (IntelliJ)
 
@@ -99,29 +98,31 @@ cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 /opt/idea/bin/idea.sh .
 ```
 
-Start a new terminal in new IntelliJ-Window.
+Start a new terminal in **new IntelliJ-Window**.
 
 ```bash
 ssh-add ~/.ssh/id_rsa
 ```
 
-Open the story-file we work with in new IntelliJ-Window.
+Open the story-file we work with in **new IntelliJ-Window**.
 
 Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
 
 ## Regular task: Local: run keycloak on commandline
 
-Many ways starting keycloak on a commandline in [here](../howto-02-run.md#commandline)
+Different ways starting keycloak on a commandline in [here](../howto-02-run.md#commandline)
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ)
 
-### Run
+### Run minimal
 
 First run `launcher-in-memory`...
 
 Open http://localhost:8080 in browser
 
 Run a simple api call from [keycloak-api](../api/keycloak-discovery.http)
+
+All [keycloak application parameters](https://www.keycloak.org/server/all-config) can be used in launch-config.
 
 ### Run with extensive Logging
 
@@ -137,7 +138,7 @@ Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.ht
 
 Stop previous launch
 
-Launch IDELauncher based run config, e.g. `launcher-in-memory` via Debug-Starter
+**Debug** `launcher-in-memory`
 
 Set a breakpoint in e.g. TokenEndpoint.java
 
@@ -145,7 +146,9 @@ Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.ht
 
 Step around in the breakpoint, set e.g. add response-header.
 
-### Reload changed code in debugger
+Other ways through remote debugging.
+
+### Changed code (not only during debugging)
 
 Change code: e.g. add response header.
 
@@ -153,37 +156,49 @@ Recompile the current File from Build-Menu.
 
 Repeat token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
-Alternative is to stop and rebuild.
+Without the debugger and for more complicated stuff, changes are either visible:
+- immediately (IDE build)
+- after restarting the launch-config
+- a partial/complete rebuild through maven
 
 ### Persistence
 
 By default, there is a [file based h2 database](https://www.keycloak.org/server/all-config#category-database) for persistence.
 
-When using IDELauncher, everything resides in target-Folder to have it cleaned up via maven.
+When using IDELauncher, everything regarding persistence resides in /target-folder to have it cleaned up via maven.
 
 This can be changed via *kc.home.dir* setting to avoid being deleted via clean-goal of a maven run.
 
-Another option of course would be one of the databases keycloak supports e.g. postgres.
+Another option of course would be one of the databases keycloak supports e.g. postgres, but requires a running postgres somewhere.
+
+...
 
 ### Configuration
 
-Through persistence, we would not lose our Clients, Users, Roles, Groups, etc.
+Through persistence, we would **not** lose our Clients, Users, Roles, Groups, etc.
 
 Automation of this configuration could be an additional feature, but also reproduce our config explicitly.
 
+...
+
 ### Run a specific version
-For reproducing bugs or understanding behaviour in a previous version.
+For reproducing bugs or understanding behaviour in a previous release-version of keycloak.
 
 [Sync tags](../howto-00-regular-sync.md#sync-tags-for-keycloak-releases) if they are missing.
 
 ```bash
 git checkout 26.0.1
 ```
-
 Build and run as before...
 
-### Continue
+### More on Running in the IDE(IntelliJ)
 Not as a story documented [here](../howto-02-run.md#ide-intellij)
+
+## Regular task: Local: run keycloak's admin-ui in dev-mode and IDE (VSCode)
+Skip today
+
+## Regular task: Local: run keycloak's account-ui in dev-mode and IDE (VSCode)
+Skip today
 
 ## Regular task: Local: start a new pull-request
 Skip today

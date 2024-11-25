@@ -8,22 +8,28 @@ All [keycloak application parameters](https://www.keycloak.org/server/all-config
 Required:
 - java in version 21
 
-Run from jar-file
-```
-java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --verbose
-```
-
 Run from maven goal via quarkus:dev
 ```
 cd quarkus/server
 ../../mvnw clean quarkus:dev -Dquarkus.args="start-dev --verbose"
 ```
 
+To run from jar-file pom.xml of /quarkus/server needs an addition:
+```
+<dependency>
+    <groupId>com.oracle.database.jdbc</groupId>
+    <artifactId>ojdbc8</artifactId>
+</dependency>
+```
+```
+java -jar quarkus/server/target/lib/quarkus-run.jar start-dev --verbose
+```
+
 ## IDE (IntelliJ)
 Required:
 - Working IDE using java, mvn, etc.
 
-Run configurations for different purposes:
+### Available run-configurations
 
 | Config                     | Description                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------|
@@ -37,4 +43,4 @@ Question: What useful launch-configs or templates should be shared?
 ### keycloak-quarkus-server-app 
 IntelliJ recognizes a quarkus app, but its not possible to launch or use it.
 
-Question: Why?
+Questions: Ideas or is the IDELauncher the only answer?
