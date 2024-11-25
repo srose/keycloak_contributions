@@ -1,6 +1,6 @@
-# Sync your keycloak fork with keycloak itself 
+# Sync your keycloak fork with Keycloak itself 
 Working with the code of keycloak happens in your fork.
-Synchronizing the fork and the keycloak repo must at least happen when a pull request is created or updated.
+Synchronizing the fork and the Keycloak repo must at least happen when a pull request is created or updated.
 The changes must be a diff to the latest changes:
 Avoid pushing something on main of your fork.
 Probably have every IDE pointing there closed.
@@ -8,7 +8,7 @@ Probably have every IDE pointing there closed.
 Required:
 - git
 - ssh
-- command-line with shell in a keycloak-root-directory
+- command-line with shell in a Keycloak root directory
 
 ![image](./images/regular_branch_unsynced.png)
 
@@ -17,7 +17,7 @@ Go to the GitHub page of your fork e.g.: https://github.com/srose/keycloak
 and use the *Sync fork* button on the right:
 ![image](images/regular_branch_unsynced_fork.png)
 
-This works regardless of the state the current keycloak-directory is in.
+This works regardless of the state the current Keycloak directory is in.
 
 ```bash
 CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
@@ -45,7 +45,7 @@ git stash pop
 
 ## Command-line only
 Required:
-- a remote upstream point to keycloak central in terms of git. Check via `git remote -v`
+- a remote upstream point to Keycloak central in terms of git. Check via `git remote -v`
 
 This works regardless of the state the current keycloak-root directory is in.
 
@@ -81,7 +81,7 @@ git checkout $CURRENT_BRANCH
 git stash pop
 ```
 
-## Sync tags of your fork with keycloak tags aka releases.
+## Sync tags of your fork with Keycloak tags aka releases
 
 ```bash
 git fetch --tags upstream

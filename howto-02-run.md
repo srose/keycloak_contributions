@@ -33,9 +33,9 @@ Required:
 
 | Config                     | Description                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------|
-| launcher-in-memory         | Uses IDELauncher from keycloak to run keycloak with in memory db                                |
-| launcher-in-memory-logging | Uses IDELauncher from keycloak to run keycloak with in memory db with extensive logging enabled |
-| mvn-quarkus-dev-debug      | Uses maven and quarkus:dev task to run keycloak with debugging enabled on port 5005             |
+| launcher-in-memory         | Uses IDELauncher from Keycloak to run Keycloak with in memory db                                |
+| launcher-in-memory-logging | Uses IDELauncher from Keycloak to run Keycloak with in memory db with extensive logging enabled |
+| mvn-quarkus-dev-debug      | Uses maven and quarkus:dev task to run Keycloak with debugging enabled on port 5005             |
 | debug-remote-5005          | Remote debugging on port 5005                                                                   |
 
 Question: What useful launch-configs or templates should be shared?
