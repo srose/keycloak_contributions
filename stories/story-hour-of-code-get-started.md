@@ -97,9 +97,7 @@ yes | cp -rf $CODE_HOME/keycloak_contributions/launch/* $CODE_HOME/$KEYCLOAK_LOC
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-Run your IDE (IntelliJ) from here...
-Sometimes the result looks wierd.
-Use the Action "Reload all maven projects" to fix this.
+Run your IDE (IntelliJ) and open the current location.
 
 Open the story-file we work with in **new IntelliJ-Window**.
 
