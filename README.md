@@ -8,9 +8,18 @@ The sessions will be part of the meetup [Keycloak hour of code](https://www.meet
 
 Get in touch if you would like to do share something.
 
-| Date       | Topic                  | Links                                                                                                                      | 
-|------------|------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| 25.11.2025 | Get started            | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/304060970), [Slides](./slides/01_Get_ready_to_contribute.pdf) |
-| ?          | UI-development?        | |
-| ?          | Pull-request handling? | |
+## Scheduled
+
+| Date       | Topic                               | Links                                                                                                                      | 
+|------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 27.01.2025 | Running Integration Tests (old way) | Coming soon [Meetup](https://www.meetup.com/keycloak-hour-of-code/events)                                                  |
+| 25.11.2024 | Get started                         | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/304060970), [Slides](./slides/01_Get_ready_to_contribute.pdf) |
+
+## Upcoming topics
+| Topic                     | Links                                                                                                                      | 
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| The new  Test-Frameowrk                 |                                                                                                                            |
+| UI-development?           |  
+| Configuration             |
+| Pull-request handling?    |                                                                                                                            |
  

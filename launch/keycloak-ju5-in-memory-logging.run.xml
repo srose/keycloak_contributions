@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="keycloak-ju5-in-memory-logging" type="Application" factoryName="Application">
+    <envs>
+      <env name="KC_LOG_LEVEL" value="DEBUG" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="org.keycloak.Keycloak" />
+    <module name="keycloak-junit5" />
+    <option name="PROGRAM_PARAMETERS" value="start-dev --log-console-level=debug --log-level=org.keycloak.services:debug,org.keycloak.protocol:debug,io.quarkus:debug --http-port=8080 --verbose" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

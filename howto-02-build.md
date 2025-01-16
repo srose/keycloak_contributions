@@ -23,6 +23,11 @@ Other steps to skip similar to skipTests?
 | skipExamples  | OpenAPI generation without examples                     |
 | ?             | ?                                                       |
 
+Favorite build command
+```bash
+./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples
+```
+
 Build a distribution with all adapters using the distribution-profile
 ```
 ./mvnw clean install -Pdistribution

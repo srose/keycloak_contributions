@@ -7,11 +7,9 @@ Keycloak repositories on GitHub contain a lot of [useful information regarding c
 
 This should probably not live long...
 
-## Local machine: preparation steps
-1. Install & configure git 
-2. Install Java 21
-4. Generate ssh-key into ~/.ssh/
-   - Alternative: use https instead of ssh (in preparation)
+## Preparation
+
+In general what is needed before contributing as necessary one time [preparation](../howto-00-prepare.md).
 
 ## Regular task: Local machine: preparation steps
 1. Have an environment-variable CODE_HOME and KEYCLOAK_LOCAL_DIR in place
@@ -24,18 +22,11 @@ export GITHUB_USER=srose
 ssh-add ~/.ssh/id_rsa
 ```
 
-## GitHub: initialization steps
-1. Create a GitHub account: https://github.com/signup
-2. Set up your GitHub account with an ssh-key: https://github.com/settings/keys
-
-## GitHub: prepare git repo to contribute to
-Create a fork of the keycloak-repository
-- https://github.com/keycloak/keycloak/fork
-
-
-## Local: prepare git repo
+## Local: prepare local copy of keycloak using command-line
 Alternatives:
 - Use IDE (IntelliJ) GitHub-Integration 
+- Use remote IDE
+- ...
 
 Notes: 
 - It might be useful to have multiple local git repos for keycloak.
@@ -71,19 +62,17 @@ git remote -v
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
 
-Details for [keeping in sync](../howto-00-regular-sync.md)
+Details for [keeping in sync](../howto-01-regular-sync.md)
 
 ## Regular task: Local: build on command-line
 ```bash
 cd $CODE_HOME/$KEYCLOAK_LOCAL_DIR
 ```
+Run a build command first, before opening an IDE is recommended.
 
-Run a build command first, before opening an IDE is recommended 
-```bash
-./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples
-```
+Please also see some notes regarding [IntelliJ](../howto-02-ide-intellij.md)
 
-... but there is a lot more on [building](../howto-01-build.md#command-line)
+All details on [building](../howto-02-build.md#command-line)
 
 ## Regular task: Local: open in IDE (IntelliJ)
 
@@ -101,17 +90,17 @@ Run your IDE (IntelliJ) and open the current location or use the `Project from e
 
 Open the story-file we work with in **new IntelliJ-Window**.
 
-Other IDE-build related info [here](../howto-01-build.md#ide-intellij)
+Other IDE-build related info [here](../howto-02-build.md#ide-intellij)
 
 ## Regular task: Local: run keycloak on command-line
 
-Different ways starting keycloak on a command-line in [here](../howto-02-run.md#command-line)
+Different ways starting keycloak on a command-line in [here](../howto-03-run.md#command-line)
 
 ## Regular task: Local: run keycloak in IDE (IntelliJ)
 
 ### Run minimal
 
-First run `launcher-in-memory`...
+First run `keycloak-ju5in-memory`...
 
 Open http://0.0.0.0:8080/ in browser
 
@@ -125,7 +114,7 @@ Enable logging in the run-configuration to e.g. protocol
 
 Stop previous launch
 
-Run `launcher-in-memory-logging`
+Run `keycloak-ju5in-memory-logging`
 
 Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
@@ -133,7 +122,7 @@ Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.ht
 
 Stop previous launch
 
-**Debug** `launcher-in-memory`
+**Debug** `keycloak-ju5in-memory`
 
 Set a breakpoint in e.g. TokenEndpoint.java
 
@@ -179,15 +168,15 @@ Automation of this configuration could be an additional feature, but also reprod
 ### Run a specific version
 For reproducing bugs or understanding behaviour in a previous release-version of keycloak.
 
-[Sync tags](../howto-00-regular-sync.md#sync-tags-for-keycloak-releases) if they are missing.
+[Sync tags](../howto-01-regular-sync.md#sync-tags-for-keycloak-releases) if they are missing.
 
 ```bash
-git checkout 26.0.1
+git checkout 26.1.0
 ```
 Build and run as before...
 
 ### More on Running in the IDE(IntelliJ)
-Not as a story documented [here](../howto-02-run.md#ide-intellij)
+Not as a story documented [here](../howto-03-run.md#ide-intellij)
 
 ## Regular task: Local: run keycloak's admin-ui in dev-mode and IDE (VSCode)
 Skip today
