@@ -17,12 +17,12 @@ In general what is needed before contributing as necessary one time [preparation
 
 ```bash
 export CODE_HOME=~/Local/repositories
-export KEYCLOAK_LOCAL_DIR=keycloak_my
+export KEYCLOAK_LOCAL_DIR=keycloak_srose
 export GITHUB_USER=srose
 ssh-add ~/.ssh/id_rsa
 ```
 
-## Local: prepare local copy of keycloak using command-line
+## Local machine: Prepare local copy of keycloak using command-line
 Alternatives:
 - Use IDE (IntelliJ) GitHub-Integration 
 - Use remote IDE
@@ -100,7 +100,7 @@ Different ways starting keycloak on a command-line in [here](../howto-03-run.md#
 
 ### Run minimal
 
-First run `keycloak-ju5in-memory`...
+First run `keycloak-ju5-in-memory`...
 
 Open http://0.0.0.0:8080/ in browser
 
@@ -114,7 +114,7 @@ Enable logging in the run-configuration to e.g. protocol
 
 Stop previous launch
 
-Run `keycloak-ju5in-memory-logging`
+Run `keycloak-ju5-in-memory-logging`
 
 Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.http)
 
@@ -122,7 +122,7 @@ Run a token call from [keycloak-api](../api/keycloak-client-credentials-grant.ht
 
 Stop previous launch
 
-**Debug** `keycloak-ju5in-memory`
+**Debug** `keycloak-ju5-in-memory`
 
 Set a breakpoint in e.g. TokenEndpoint.java
 
@@ -149,7 +149,7 @@ Without the debugger and for more complicated stuff, changes are either visible:
 
 By default, there is a [file based h2 database](https://www.keycloak.org/server/all-config#category-database) for persistence.
 
-When using IDELauncher, everything regarding persistence resides in /target-folder to have it cleaned up via maven.
+When using Keycloak from keycloak-junit5, everything regarding persistence resides in /target-folder to have it cleaned up via maven.
 
 This can be changed via *kc.home.dir* setting to avoid being deleted via clean-goal of a maven run.
 
@@ -177,18 +177,3 @@ Build and run as before...
 
 ### More on Running in the IDE(IntelliJ)
 Not as a story documented [here](../howto-03-run.md#ide-intellij)
-
-## Regular task: Local: run keycloak's admin-ui in dev-mode and IDE (VSCode)
-Skip today
-
-## Regular task: Local: run keycloak's account-ui in dev-mode and IDE (VSCode)
-Skip today
-
-## Regular task: Local: start a new pull-request
-Skip today
-
-## Regular task: Local: keep in sync with a pull-request in progress
-Skip today
-
-## Regular task: Local: finish a pull-request
-Skip today
