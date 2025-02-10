@@ -3,6 +3,7 @@
     <option name="MAIN_CLASS_NAME" value="org.keycloak.Keycloak" />
     <module name="keycloak-junit5" />
     <option name="PROGRAM_PARAMETERS" value="start-dev --http-port=8080 --verbose" />
+    <option name="VM_PARAMETERS" value="-Djava.util.concurrent.ForkJoinPool.common.threadFactory=io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
