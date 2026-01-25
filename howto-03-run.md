@@ -16,14 +16,12 @@ cd quarkus/server
 
 To run from jar-file pom.xml of /quarkus/server remove:
 ```
-<!-- Necessary for proper execution of IDELauncher -->
-<!-- Can be removed as part of the https://github.com/keycloak/keycloak/issues/22455 enhancement -->
+<!-- Note: Issue #22455 was closed as "not planned" - Dev UI will not be included in distribution -->
 <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-vertx-http-dev-ui-resources</artifactId>
     <scope>provided</scope>
 </dependency>
-<!-- this dependency is necessary to start the IDELauncher -->
 <dependency>
     <groupId>com.oracle.database.jdbc</groupId>
     <artifactId>ojdbc11</artifactId>
