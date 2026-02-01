@@ -171,7 +171,7 @@ For reproducing bugs or understanding behaviour in a previous release-version of
 [Sync tags](../howto-01-regular-sync.md#sync-tags-for-keycloak-releases) if they are missing.
 
 ```bash
-git checkout 26.1.0
+git checkout <release-tag>  # e.g. 26.1.0, 26.4.7, etc.
 ```
 Build and run as before...
 

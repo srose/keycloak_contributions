@@ -18,7 +18,7 @@ Get in touch if you would like to do share something.
 ## Upcoming topics
 | Topic                     | Links                                                                                                                      | 
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| The new  Test-Frameowrk                 |                                                                                                                            |
+| The new Test-Framework                  |                                                                                                                            |
 | UI-development?           |  
 | Configuration             |
 | Pull-request handling?    |                                                                                                                            |

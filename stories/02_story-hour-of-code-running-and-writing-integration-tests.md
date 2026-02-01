@@ -31,7 +31,7 @@ The test-development doc also adds details where to find the integration tests a
 The integration test framework in use is called arquillian.
 Everything keycloak can do, covered through the tests - awesome!
 Hm, [arquillian](https://arquillian.org/) looks somehow discontinued? [Github-repos](https://github.com/arquillian) at least has changes.
-A [new test-framework](https://www.keycloak.org/2024/11/preview-keycloak-test-framework.html) was introduced, but that is a topic on its own too.
+A [new test-framework](https://www.keycloak.org/2024/11/preview-keycloak-test-framework) was introduced, but that is a topic on its own too.
 Same with migrating from old to new way of testing.
 
 Bigger amounts of tests take a long time and there might be 'local' issues when running from IDE or command-line, so it is fine to run them in Github.
