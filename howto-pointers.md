@@ -1,4 +1,4 @@
-# Keycloak documentation pointers
+# Keycloak documentation pointers for contributors
 
 ## General & Contribution
 - [README.md in /](https://github.com/keycloak/keycloak/blob/main/README.md)
@@ -6,6 +6,8 @@
 - [PR-CHECKLIST.md in /](https://github.com/keycloak/keycloak/blob/main/PR-CHECKLIST.md)
 - [All md-documents in /docs](https://github.com/keycloak/keycloak/blob/main/docs/)
 - [building.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/building.md)
+- [updating-database-schema.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/updating-database-schema.md)
+- [translation.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/translation.md)
 - [README.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/README.md)
 - [CONTRIBUTING.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/CONTRIBUTING.md)
 - [contributing.adoc in /docs/documentation/internal_resources](https://github.com/keycloak/keycloak/blob/main/docs/documentation/internal_resources/contributing.adoc)
@@ -31,7 +33,15 @@
 
 ### New Test-Framework in Keycloak
 - [Blog: Introducing the Keycloak Test Framework](https://www.keycloak.org/2024/11/preview-keycloak-test-framework)
-- [README.MD in test-framework](https://github.com/keycloak/keycloak/blob/main/test-framework/README.md)
+- [README.MD in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/README.md)
+- [GETTING_STARTED.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/GETTING_STARTED.md)
+- [CONFIG.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/CONFIG.MD)
+- [WRITING_TESTS.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/WRITING_TESTS.md)
+- [RUNNING_TESTS.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/RUNNING_TESTS.md)
+- [LOGGING.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/LOGGING.md)
+- [SUITES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/SUITES.md)
+- [BEST_PRACTICES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/BEST_PRACTICES.md)
+- [EXTENSIONS.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/EXTENSIONS.md)
 
 ### Conformance tests
 - [tests-oidc-conformance.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-oidc-conformance.md)

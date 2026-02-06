@@ -1,6 +1,9 @@
 # Build Keycloak from source
 Required:
 - java in version 21
+What about?
+- pnpm 
+- node.js
 
 ## Command-line
 Full build including tests
