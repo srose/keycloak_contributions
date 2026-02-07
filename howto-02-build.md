@@ -1,48 +1,63 @@
 # Build Keycloak from source
 Required:
 - java in version 21
+
 What about?
-- pnpm 
-- node.js
+- Maven: should be used from the project: mvnw
+
+- pnpm: install locally for the UI parts of Keycloak
+- node >= 21: install locally for the UI parts of Keycloak
+
+> [INFO] --- frontend:1.15.0:install-node-and-pnpm (default) @ keycloak-js-parent ---
+> [INFO] Installing node version v24.9.0
+> [INFO] Unpacking /home/srose/.m2/repository/com/github/eirslett/node/24.9.0/node-24.9.0-linux-x64.tar.gz into /home/srose/repositories/keycloak_srose_II/js/node/tmp
+> [INFO] Copying node binary from /home/srose/repositories/keycloak_srose_II/js/node/tmp/node-v24.9.0-linux-x64/bin/node to /home/srose/repositories/keycloak_srose_II/js/node/node
+> [INFO] Installed node locally.
+> [INFO] Installing pnpm version 10.14.0
+
+
+## Performance
+Activate build-cache for performance
+```bash
+export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
+```
+
 
 ## Command-line
-Full build including tests
+Full build including tests, which takes a lot of time.
 ```bash
 ./mvnw clean install
 ```
 
-Build without executing tests
+Build without executing tests to save time
 ```
 ./mvnw clean install -DskipTests
 ```
-![image](images/build_result_time.png)
 
-Other steps to skip similar to skipTests?
+Further flags
 
-| Switch        | Description                                             |
-|---------------|---------------------------------------------------------|
-| skipTests     | Prevents test-execution                                 |
-| skipTestsuite | Deactivates the Profile *testsuite*, enabled by default |
-| skipExamples  | OpenAPI generation without examples                     |
-| ?             | ?                                                       |
+| Switch          | Description                                             |
+|-----------------|---------------------------------------------------------|
+| skipTests       | Prevents test execution                                 |
+| skipTestsuite   | Deactivates the Profile *testsuite*, enabled by default |
+| skipExamples    | OpenAPI generation without examples                     |
+| skipDocs        | Exclude the docs maven module                           |
+| maven.test.skip | Skip also test compilation (and execution)            |
 
-Favorite build command
+Favorite build command?
 ```bash
-./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples
+./mvnw clean install -Dmaven.test.skip -DskipTests -DskipTestsuite -DskipExamples -DskipDocs
 ```
 
+![image](images/build_result_time.png)
+
+## Quarkus distribution
 Build a distribution with all adapters using the distribution-profile
 ```
 ./mvnw clean install -Pdistribution
 ```
 
-Other profiles?
-
-### Performance
-Activate build-cache for performance
-```bash
-export MAVEN_OPTS="-Dmaven.build.cache.enabled=true"
-```
+Find [more profiles and flags](./howto-profiles-and-flags.md) assembled by some GenAI.
 
 ### Partial builds
 
@@ -51,7 +66,7 @@ Build only the quarkus part
 ./mvnw -pl quarkus/deployment,quarkus/dist -am -DskipTests clean install
 ```
 
-Question: What other partial builds are useful to speed up roundtrips?
+Question: What other partial builds are useful to speed up round-trips?
 
 ## IDE: IntelliJ
 **Hint**: A command-line build is recommended to have everything working in an IDE, see above.

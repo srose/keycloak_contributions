@@ -12,6 +12,7 @@
 - [CONTRIBUTING.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/CONTRIBUTING.md)
 - [contributing.adoc in /docs/documentation/internal_resources](https://github.com/keycloak/keycloak/blob/main/docs/documentation/internal_resources/contributing.adoc)
 - [README.md in /docs/documentation](https://github.com/keycloak/keycloak/blob/main/docs/documentation/README.md)
+- [README.md in /js](https://github.com/keycloak/keycloak/blob/main/js/README.md)
 - [README.md in /js/apps/account-ui](https://github.com/keycloak/keycloak/blob/main/js/apps/account-ui/README.md)
 - [README.md in /js/apps/admin-ui](https://github.com/keycloak/keycloak/blob/main/js/apps/admin-ui/README.md)
 - [CONTRIBUTING.md in /js/apps/admin-ui](https://github.com/keycloak/keycloak/blob/main/js/apps/admin-ui/CONTRIBUTING.md)
@@ -20,6 +21,12 @@
 ## Testing in Keycloak
 - [tests-development.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-development.md)
 - [tests.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests.md)
+- [README.md in /tests/clustering/README.md](https://github.com/keycloak/keycloak/tree/main/tests/clustering/README.md)
+- [MIGRATING_TESTS.md in /tests](https://github.com/keycloak/keycloak/tree/main/tests/MIGRATING_TESTS.md)
+- [MANUAL_MIGRATION.md in /tests](https://github.com/keycloak/keycloak/tree/main/tests/MANUAL_MIGRATION.md)
+- [FIPS_104-2.md in /tests](https://github.com/keycloak/keycloak/tree/main/tests/FIPS_104-2.md)
+
+### Testsuite
 - [README.md in /testsuite/model](https://github.com/keycloak/keycloak/blob/main/testsuite/model/README.md)
 - [README.md in /testsuite/integration-arquillian](https://github.com/keycloak/keycloak/blob/main/testsuite/integration-arquillian/README.md)
 - [HOW-TO-RUN.md in /testsuite/integration-arquillian](https://github.com/keycloak/keycloak/blob/main/testsuite/integration-arquillian/HOW-TO-RUN.md)
@@ -42,6 +49,13 @@
 - [SUITES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/SUITES.md)
 - [BEST_PRACTICES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/BEST_PRACTICES.md)
 - [EXTENSIONS.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/EXTENSIONS.md)
+
+### Run Admin-UI tests
+- [CONTRIBUTING.md in /js/apps/admin-ui](https://github.com/keycloak/keycloak/tree/main/js/apps/admin-ui/CONTRIBUTING.md)
+- [package.json in /js/apps/admin-ui/](https://github.com/keycloak/keycloak/tree/main/js/apps/admin-ui/package.json)
+
+### Run Account-UI tests
+- [package.json in /js/apps/account-ui/](https://github.com/keycloak/keycloak/tree/main/js/apps/account-ui/package.json)
 
 ### Conformance tests
 - [tests-oidc-conformance.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-oidc-conformance.md)
