@@ -46,24 +46,23 @@ Further flags
 
 Favorite build command?
 ```bash
-./mvnw clean install -Dmaven.test.skip -DskipTests -DskipTestsuite -DskipExamples -DskipDocs
+./mvnw clean install -DskipTests -DskipTestsuite -DskipExamples -DskipDocs
 ```
 
 ![image](images/build_result_time.png)
 
 ## Quarkus distribution
-Build a distribution with all adapters using the distribution-profile
+Build a distribution with all adapters using the distribution-profile.
+
 ```
 ./mvnw clean install -Pdistribution
 ```
-
-Find [more profiles and flags](./howto-profiles-and-flags.md) assembled by some GenAI.
 
 ### Partial builds
 
 Build only the quarkus part
 ```
-./mvnw -pl quarkus/deployment,quarkus/dist -am -DskipTests clean install
+./mvnw -pl quarkus -am -DskipTests clean install
 ```
 
 Question: What other partial builds are useful to speed up round-trips?

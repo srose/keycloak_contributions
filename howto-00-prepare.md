@@ -13,6 +13,7 @@ Create a fork of the keycloak-repository
 ## Local machine: preparation steps
 1. Install & configure git
 2. Install Java 21
+3. Install pnpm and node for Frontend-Development
 4. Generate ssh-key into ~/.ssh/
     - Alternative: use https instead of ssh (in preparation)
     - Alternative: use IDE integration
