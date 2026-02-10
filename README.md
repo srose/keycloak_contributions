@@ -10,15 +10,15 @@ Get in touch if you would like to do share something.
 
 ## Scheduled
 
-| Date       | Topic                               | Links                                                                                                                      | 
-|------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| 27.01.2025 | Running Integration Tests (old way) | Coming soon [Meetup](https://www.meetup.com/keycloak-hour-of-code/events)                                                  |
-| 25.11.2024 | Get started                         | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/304060970), [Slides](./slides/01_Get_ready_to_contribute.pdf) |
+| Date       | Topic                               | Links                                                                                                                                                  | 
+|------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 05.02.2026 | Contribute to Keycloak in 2026      | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/313038986), [Slides](./slides/03_Contributing%20to%20Keycloak%20in%202026.pdf)            |
+| 27.01.2025 | Running Integration Tests (old way) | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/305359007), [Slides](./slides/02_Running and writing integration tests for Keycloak.pdf)  |
+| 25.11.2024 | Get started                         | [Meetup](https://www.meetup.com/keycloak-hour-of-code/events/304060970), [Slides](./slides/01_Get_ready_to_contribute.pdf)                             |   
 
 ## Upcoming topics
 | Topic                     | Links                                                                                                                      | 
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| The new Test-Framework                  |                                                                                                                            |
 | UI-development?           |  
 | Configuration             |
 | Pull-request handling?    |                                                                                                                            |
