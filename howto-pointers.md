@@ -4,8 +4,11 @@
 - [README.md in /](https://github.com/keycloak/keycloak/blob/main/README.md)
 - [CONTRIBUTING.md in /](https://github.com/keycloak/keycloak/blob/main/CONTRIBUTING.md)
 - [PR-CHECKLIST.md in /](https://github.com/keycloak/keycloak/blob/main/PR-CHECKLIST.md)
-- [All md-documents in /docs](https://github.com/keycloak/keycloak/blob/main/docs/)
+- [bug-triage.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/bug-triage.md)
 - [building.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/building.md)
+- [cncf.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/cncf.md)
+- [dependency-license-information.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/dependency-license-information.md)
+- [fips.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/fips.md)
 - [updating-database-schema.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/updating-database-schema.md)
 - [translation.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/translation.md)
 - [README.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/README.md)
@@ -20,6 +23,7 @@
 
 ## Testing in Keycloak
 - [tests-development.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-development.md)
+- [tests-oidc-conformance.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-oidc-conformance.md)
 - [tests.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests.md)
 - [README.md in /tests/clustering/README.md](https://github.com/keycloak/keycloak/tree/main/tests/clustering/README.md)
 - [MIGRATING_TESTS.md in /tests](https://github.com/keycloak/keycloak/tree/main/tests/MIGRATING_TESTS.md)
