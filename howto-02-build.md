@@ -4,9 +4,8 @@ Required:
 
 What about?
 - Maven: should be used from the project: mvnw
-
-- pnpm: install locally for the UI parts of Keycloak
-- node >= 21: install locally for the UI parts of Keycloak
+- pnpm & node: install locally for the UI parts of Keycloak 
+- or use the ones from the maven build, paced inside js/node/pnpm and js/node/node
 
 > [INFO] --- frontend:1.15.0:install-node-and-pnpm (default) @ keycloak-js-parent ---
 > [INFO] Installing node version v24.9.0
@@ -74,7 +73,7 @@ Some maven plugins are generating class files that are necessary.
 **Hint**: Use the Build-Menu Item in IntelliJ: *Build Project* but not *Rebuild Project*. 
 *Rebuild Project* would remove those class files and you'll end up with compilation errors.
 
-Question: docs/documentation must be added manually in IDE: Could be added to [pom.xml in docs](./docs/pom.xml)?
+Question: docs/documentation must be added manually in IDE: Could be added to [pom.xml in docs](https://github.com/keycloak/keycloak/blob/main/docs/pom.xml)?
 
 ### Available run-configurations
 

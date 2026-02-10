@@ -3,7 +3,7 @@
     <option name="MAIN_CLASS_NAME" value="org.keycloak.Keycloak" />
     <module name="keycloak-junit5" />
     <option name="PROGRAM_PARAMETERS" value="start-dev --db postgres --db-url-host localhost --db-username keycloak --db-password pass --db-url-database keycloak --http-port=8080 --verbose" />
-    <option name="VM_PARAMETERS" value="-Djava.util.concurrent.ForkJoinPool.common.threadFactory=io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory" />
+    <option name="VM_PARAMETERS" value="-XX:+EnableDynamicAgentLoading" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.keycloak.quarkus._private.*" />

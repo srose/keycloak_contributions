@@ -2,8 +2,8 @@
   <configuration default="false" name="keycloak-ju5-in-memory" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="org.keycloak.Keycloak" />
     <module name="keycloak-junit5" />
-    <option name="PROGRAM_PARAMETERS" value="start-dev --http-port=8080 --verbose" />
-    <option name="VM_PARAMETERS" value="-Djava.util.concurrent.ForkJoinPool.common.threadFactory=io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory" />
+    <option name="PROGRAM_PARAMETERS" value="start-dev --bootstrap-admin-username admin --bootstrap-admin-password admin --bootstrap-admin-client-id temp-admin --bootstrap-admin-client-secret mysecret --http-port=8080 --verbose" />
+    <option name="VM_PARAMETERS" value="-XX:+EnableDynamicAgentLoading" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

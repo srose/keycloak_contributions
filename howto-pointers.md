@@ -1,4 +1,4 @@
-# Keycloak documentation pointers for contributors
+# Keycloak documentation for contributors
 
 ## General & Contribution
 - [README.md in /](https://github.com/keycloak/keycloak/blob/main/README.md)
@@ -35,9 +35,6 @@
 - [README.md in /testsuite/integration-arquillian/servers/app-server](https://github.com/keycloak/keycloak/tree/main/testsuite/integration-arquillian/servers/app-server/README.md)
 - [tests-db.md in /docs](https://github.com/keycloak/keycloak/blob/main/docs/tests-db.md)
 
-### Quarkus
-- [Running tests section in CONTRIBUTING.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/CONTRIBUTING.md)
-
 ### New Test-Framework in Keycloak
 - [Blog: Introducing the Keycloak Test Framework](https://www.keycloak.org/2024/11/preview-keycloak-test-framework)
 - [README.MD in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/README.md)
@@ -49,6 +46,9 @@
 - [SUITES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/SUITES.md)
 - [BEST_PRACTICES.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/BEST_PRACTICES.md)
 - [EXTENSIONS.md in test-framework/docs](https://github.com/keycloak/keycloak/tree/main/test-framework/docs/EXTENSIONS.md)
+
+### Quarkus
+- [Running tests section in CONTRIBUTING.md in /quarkus](https://github.com/keycloak/keycloak/blob/main/quarkus/CONTRIBUTING.md)
 
 ### Run Admin-UI tests
 - [CONTRIBUTING.md in /js/apps/admin-ui](https://github.com/keycloak/keycloak/tree/main/js/apps/admin-ui/CONTRIBUTING.md)

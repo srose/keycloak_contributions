@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ui-tests--admin-ui" type="js.build_tools.npm" nameIsGenerated="false">
+    <package-json value="$PROJECT_DIR$/js/apps/admin-ui/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="test:integration" />
+    </scripts>
+    <arguments value="-- --project=chromium users/main.spec.ts" />
+    <node-interpreter value="$PROJECT_DIR$/js/node/node" />
+    <package-manager value="pnpm" />
+    <envs />
+    <EXTENSION ID="com.intellij.javascript.debugger.execution.StartBrowserRunConfigurationExtension">
+      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" with-js-debugger="true" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
